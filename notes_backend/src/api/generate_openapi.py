@@ -1,9 +1,10 @@
 import json
 import os
 
-from src.api.main import app
+from src.api.app import create_app
 
-# Get the OpenAPI schema
+# Build app and get the OpenAPI schema
+app = create_app()
 openapi_schema = app.openapi()
 
 # Write to file
